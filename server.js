@@ -111,6 +111,7 @@ app.post("/login", async (req, res) => {
   }
 });
 app.get("/getuser", middelware, async (req, res) => {
+  res.setHeader("Access-Control-Allow-Credentials","true")
   try {
     const exist = await play.findById(req.user.email);
     if (!exist) {
