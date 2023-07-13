@@ -5,7 +5,6 @@ const play = require("./model");
 app.use(express.json());
 const cors = require("cors");
 app.use(cors());
-res.setHeader("Access-Control-Allow-Credentials","true")
 const multer = require("multer");
 const middelware = require("./middelware");
 const jwt = require("jsonwebtoken");
