@@ -1,97 +1,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/POM/4.0.0/maven-4.0.0.xsd">
-    
-    <!-- Basic Project Information -->
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example</groupId>
-    <artifactId>my-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging> <!-- Can be 'jar', 'war', 'ear', etc. -->
 
-    <!-- Project Description -->
-    <name>My Project</name>
-    <url>http://www.example.com</url>
-    <description>A brief description of the project.</description>
-    
-    <!-- Parent Project (if any) -->
-    <!--
-    <parent>
-        <groupId>org.example</groupId>
-        <artifactId>parent-project</artifactId>
-        <version>1.0</version>
-    </parent>
-    -->
-    
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Basic Project Information -->
+    <groupId>com.example</groupId>
+    <artifactId>my-web-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging> <!-- Set packaging to war -->
+
     <!-- Dependencies -->
     <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>5.3.8</version>
-        </dependency>
-        <!-- Add other dependencies here -->
+        <!-- Add your dependencies here -->
     </dependencies>
-    
+
     <!-- Build Configuration -->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
-            <!-- Add other plugins here -->
         </plugins>
     </build>
-    
-    <!-- Properties -->
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
-
-    <!-- Profiles -->
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-                <env>development</env>
-            </properties>
-        </profile>
-        <!-- Add other profiles here -->
-    </profiles>
-
-    <!-- Repositories -->
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </repository>
-        <!-- Add other repositories here -->
-    </repositories>
-
-    <!-- Plugin Repositories -->
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-        </pluginRepository>
-    </pluginRepositories>
-
-    <!-- Reporting -->
-    <reporting>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.9.1</version>
-            </plugin>
-        </plugins>
-    </reporting>
 
 </project>
